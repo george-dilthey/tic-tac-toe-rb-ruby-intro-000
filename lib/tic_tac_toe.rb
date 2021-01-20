@@ -116,6 +116,7 @@ def play(board)
     turn(board)
     counter += 1
     if over?(board)
+      break
       if won?(board)
         winner = winner(board)
         puts 'Congratulations, #{winner}!'
