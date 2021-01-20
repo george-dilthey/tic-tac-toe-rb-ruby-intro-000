@@ -118,13 +118,13 @@ def play(board)
     if over?(board)
       break
     end
-    if won?(board)
-      winner = winner(board)
-      puts 'Congratulations, #{winner}!'
-      break
-    elsif draw?(board)
-      puts 'It was a draw!'
-      break
-    end
+  end
+  if won?(board)
+    winner = winner(board)
+    puts 'Congratulations, #{winner}!'
+    break
+  elsif draw?(board)
+    puts 'It was a draw!'
+    break
   end
 end
