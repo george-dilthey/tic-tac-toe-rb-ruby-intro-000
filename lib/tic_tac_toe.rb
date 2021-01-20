@@ -115,11 +115,13 @@ def play(board)
   while counter < 9
     turn(board)
     counter += 1
-  end
-  if won?(board)
-    winner = winner(board)
-    puts 'Congratulations, #{winner}! You won!'
-  elsif draw?(board)
-    puts 'It was a draw!'
+    if won?(board)
+      winner = winner(board)
+      puts 'Congratulations, #{winner}! You won!'
+      break
+    elsif draw?(board)
+      puts 'It was a draw!'
+      break
+    end
   end
 end
