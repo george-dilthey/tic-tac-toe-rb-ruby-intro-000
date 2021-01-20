@@ -49,7 +49,7 @@ def turn(board)
   input = gets
   index = input_to_index(input)
   if valid_move?(board,index)
-    move(board, index, "X")
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
@@ -67,7 +67,6 @@ def turn_count(board)
 end
 
 def current_player(board)
-  puts turn_count(board)
   turn_count(board) % 2 == 0 ? 'X' : 'O'
 end
 
